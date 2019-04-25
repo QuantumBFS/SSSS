@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 *.jl.cov
 *.jl.*.cov
 *.jl.mem
 *.jl~
+*~
+
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+
+Manifest.toml
 
 docs/build/
 docs/site/
@@ -14,6 +22,15 @@ _local/
 **/**/*.ipynb_checkpoints
 *.out
 *.log
-data/_*.dat
-data/_*.jld2
+
+*.jld2
+**/*.jld2
+**/**/*.jld2
+
+*.jld
+**/*.jld
+**/**/*.jld
+
+_*.dat
+*.swp
 __pycache__/
