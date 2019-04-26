@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *.jl.cov
 *.jl.*.cov
 *.jl.mem
@@ -34,3 +33,5 @@ _local/
 _*.dat
 *.swp
 __pycache__/
+
+*.aux
