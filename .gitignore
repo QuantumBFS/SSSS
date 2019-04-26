@@ -3,6 +3,7 @@
 *.jl.mem
 *.jl~
 *~
+.DS_Store
 
 *.jl.cov
 *.jl.*.cov
