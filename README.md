@@ -4,6 +4,26 @@
 
 ## Deep Learning and Quantum Programming: A Spring School
 
+## Usage
+
+You can open this repo as a Julia package if you have julia installed:
+
+1. open your Julia REPL, press `]`
+2. type the following
+
+```julia
+(1.0) pkg> add https://github.com/QuantumBFS/SSSS.git
+```
+
+3. press backspace
+4. type the following
+
+```julia
+julia> using SSSS
+
+julia> notebooks()
+```
+
 ## Contents
 
 ### Materials
