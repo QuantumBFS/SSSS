@@ -1,4 +1,9 @@
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+*.jl~
 *~
+.DS_Store
 
 *.jl.cov
 *.jl.*.cov
@@ -9,9 +14,14 @@ Manifest.toml
 docs/build/
 docs/site/
 
+_local/
+.ipynb_checkpoints/
+.vscode/
 *.ipynb_checkpoints
 **/*.ipynb_checkpoints
 **/**/*.ipynb_checkpoints
+*.out
+*.log
 
 *.jld2
 **/*.jld2
@@ -24,3 +34,5 @@ docs/site/
 _*.dat
 *.swp
 __pycache__/
+
+*.aux
