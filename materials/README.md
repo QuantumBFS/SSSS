@@ -12,6 +12,8 @@ https://people.maths.ox.ac.uk/gilesm/files/NA-08-01.pdf
 
 https://colah.github.io/posts/2015-08-Backprop/
 
+http://www.cs.cornell.edu/courses/cs5740/2017sp/lectures/04-nn-compgraph.pdf
+
 ## Generative Models
 
 https://openai.com/blog/generative-models/
