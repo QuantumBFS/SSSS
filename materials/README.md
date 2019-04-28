@@ -10,7 +10,7 @@ https://arxiv.org/abs/1502.05767
 
 https://people.maths.ox.ac.uk/gilesm/files/NA-08-01.pdf
 
-
+https://colah.github.io/posts/2015-08-Backprop/
 
 ## Generative Models
 
