@@ -11,7 +11,7 @@ export notebooks
 # end
 
 function notebooks()
-    return IJulia.notebook(dir=joinpath(@__DIR__, "..", "notebooks"))
+    return IJulia.notebook(dir=joinpath(@__DIR__, ".."))
 end
 
 REQUIRE = [
