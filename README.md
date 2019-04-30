@@ -4,6 +4,26 @@
 
 ## Deep Learning and Quantum Programming: A Spring School
 
+
+## Preparation
+
+### Quick start
+
+- [quick start for git](http://rogerdudler.github.io/git-guide/)
+- [quick start for command line interface](https://www.makeuseof.com/tag/a-quick-guide-to-get-started-with-the-linux-command-line/)
+
+### Installation
+- [how to install ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
+- [install annaconda](https://www.anaconda.com/distribution/)
+- [install pytorch](https://pytorch.org/)
+- [intall Yao.jl](https://github.com/QuantumBFS/Yao.jl#installation)
+
+### Julia
+- [Julia tutorial & installation guide (Chinese)](https://github.com/Roger-luo/TutorialZH.jl)
+- [一个简单的Julia教程](https://www.bilibili.com/video/av28248187?from=search&seid=5171149583764025744)
+- [Julia入门指引](https://discourse.juliacn.com/t/topic/159)
+
+
 ## Usage
 
 You can open this repo as a Julia package if you have julia installed:
@@ -23,19 +43,3 @@ julia> using SSSS
 
 julia> notebooks()
 ```
-
-## Contents
-
-### Materials
-
-#### Quick Starts
-
-- [how to install ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
-- [quick start for git](http://rogerdudler.github.io/git-guide/)
-- [quick start for command line interface](https://www.makeuseof.com/tag/a-quick-guide-to-get-started-with-the-linux-command-line/)
-- [Julia tutorial & installation guide (Chinese)](https://github.com/Roger-luo/TutorialZH.jl)
-- [install annaconda](https://www.anaconda.com/distribution/)
-- [install pytorch](https://pytorch.org/)
-- [intall Yao.jl](https://github.com/QuantumBFS/Yao.jl#installation)
-- [一个简单的Julia教程](https://www.bilibili.com/video/av28248187?from=search&seid=5171149583764025744)
-- [Julia入门指引](https://discourse.juliacn.com/t/topic/159)
