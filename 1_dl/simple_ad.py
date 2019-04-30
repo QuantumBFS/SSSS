@@ -43,7 +43,7 @@ class Variable(NodeBase):
 
 class Node(NodeBase):
 
-    def __init__(self, f : Functional, *args):
+    def __init__(self, f, *args):
         data = [each.data if isinstance(each, NodeBase) else each for each in args]
         super(Node, self).__init__(f.eval(*data))
         self.args = args
@@ -58,7 +58,7 @@ class Node(NodeBase):
         return
 
 
-class Funtional:
+class Functional:
 
     def eval(self, *args):
         raise NotImplementedError
@@ -97,7 +97,7 @@ class Sigmoid(Functional):
 
     @staticmethod
     def eval(X):
-        return 1. / (1. + np.exp(X))
+        return 1. / (1. + np.exp(-X))
 
     @staticmethod
     def gradient(delta, output, X):
@@ -119,4 +119,4 @@ if __name__ == '__main__':
     # Dense
     Z = sigmoid(matmul(A, B) + C)
     Z.backward(np.random.rand(2, 4))
-    A.grad
+    print(A.grad)
