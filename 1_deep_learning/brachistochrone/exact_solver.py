@@ -1,5 +1,5 @@
 import numpy as np
-def ExactParamater_withV(v0,g,y1):
+def solver(v0,g,y1):
     #'''the number of points to draw
     # y = k(1-cos(theta))
     # x = k(theta- sin(theta))
@@ -22,7 +22,7 @@ if __name__ == "__main__":
     y=1.0
     v0=0
     g=10
-    para = ExactParamater_withV(v0,g,y)
+    para = solver(v0,g,y)
     para = np.append(para,v0**2.0/(2*g))
     theta_list = np.linspace(para[2],para[3],3)
     x_exact = para[0]*(theta_list-np.sin(theta_list))-para[1]
