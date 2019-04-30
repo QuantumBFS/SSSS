@@ -5,6 +5,7 @@ import torch.optim as optim
 import numpy as np
 
 from torchdiffeq import odeint_adjoint as odeint
+from exact_solver import solver
 
 class MLP(nn.Module):
     def __init__(self, hidden_size, y1=1.0):
@@ -24,7 +25,7 @@ class MLP(nn.Module):
     def forward(self, x):
         '''
         y(0) = 0
-        y(1) = y1 
+        y(1) = y1
         '''
         f0 = self._f(torch.tensor([0.0]))
         f1 = self._f(torch.tensor([1.0]))
@@ -38,21 +39,27 @@ class Brachistochrone(nn.Module):
     def __init__(self, g, v0, net):
         super(Brachistochrone, self).__init__()
         self.v0 = v0
-        self.g = g 
+        self.g = g
         self.net = net
 
     def forward(self, x, t):
         with torch.enable_grad():
             y, dydx = self.net.value_and_grad(x.view(-1).detach().requires_grad_())
-        return torch.sqrt((1+dydx**2)/(2*self.g*y+ self.v0**2)) 
+        return torch.sqrt((1+dydx**2)/(2*self.g*y+ self.v0**2))
 
-def plot(model):
+def plot(model,para):
     plt.cla()
     xlist = torch.linspace(0.0, 1.0, 21)
     ylist = [model.net(torch.tensor([x])) for x in xlist]
-    plt.plot(xlist.numpy(), ylist, lw=2)
+    plt.plot(xlist.numpy(), ylist, lw=2,label='learned curve')
     plt.plot([0.0, 1.0], [0.0, model.net.y1], 'r*', ms=20)
     plt.gca().invert_yaxis()
+
+    tlist = np.linspace(para[2],para[3],21)
+    xlist = para[0]*(tlist- np.sin(tlist)) - para[1]
+    ylist = para[0]*(1 - np.cos(tlist)) -para[4]
+    plt.plot(xlist,ylist,lw=2,label='exact')
+    plt.legend(loc='upper right')
 
     plt.xlabel('$x$')
     plt.ylabel('$y$')
@@ -61,11 +68,13 @@ def plot(model):
     plt.pause(0.01)
 
 if __name__ == '__main__':
-    
-    g = 10.0  #gravity 
+
+    g = 10.0  #gravity
     v0 = 1.0  #initial velocity
-    nh = 32 # number of hidden neurons
-    y1 = 1.0 # fininal y coordinate
+    nh = 32   #number of hidden neurons
+    y1 = 1.0  #fininal y coordinate
+
+    para = np.append(solver(v0,g,y1),v0**2/(2*g)) # exact solution as a reference
 
     model = Brachistochrone(g, v0, MLP(nh, y1))
     optimizer = optim.Adam(model.parameters(), lr=1E-2)
@@ -84,4 +93,4 @@ if __name__ == '__main__':
         loss.backward()
         optimizer.step()
         print (epoch, loss.item())
-        plot(model)
+        plot(model,para)
