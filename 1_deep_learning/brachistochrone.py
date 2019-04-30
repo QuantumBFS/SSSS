@@ -5,6 +5,7 @@ import torch.optim as optim
 import numpy as np
 
 from torchdiffeq import odeint_adjoint as odeint
+from exact_solver import ExactParamater_withV
 
 class MLP(nn.Module):
     def __init__(self, hidden_size, y1=1.0):
@@ -46,13 +47,18 @@ class Brachistochrone(nn.Module):
             y, dydx = self.net.value_and_grad(x.view(-1).detach().requires_grad_())
         return torch.sqrt((1+dydx**2)/(2*self.g*y+ self.v0**2)) 
 
-def plot(model):
+def plot(model,para):
     plt.cla()
     xlist = torch.linspace(0.0, 1.0, 21)
     ylist = [model.net(torch.tensor([x])) for x in xlist]
     plt.plot(xlist.numpy(), ylist, lw=2)
     plt.plot([0.0, 1.0], [0.0, model.net.y1], 'r*', ms=20)
     plt.gca().invert_yaxis()
+
+    tlist = np.linspace(para[2],para[3],21)
+    xlist = para[0]*(tlist- np.sin(tlist)) - para[1]
+    ylist = para[0]*(1 - np.cos(tlist)) -para[4]
+    plt.plot(xlist,ylist,lw=2)
 
     plt.xlabel('$x$')
     plt.ylabel('$y$')
@@ -67,6 +73,7 @@ if __name__ == '__main__':
     nh = 32 # number of hidden neurons
     y1 = 1.0 # fininal y coordinate
 
+    para = np.append(ExactParamater_withV(v0,g,y1),v0**2/(2*g))
     model = Brachistochrone(g, v0, MLP(nh, y1))
     optimizer = optim.Adam(model.parameters(), lr=1E-2)
 
@@ -77,11 +84,11 @@ if __name__ == '__main__':
     plt.ion()
     plt.show(block=False)
 
-    for epoch in range(100):
+    for epoch in range(1000):
         optimizer.zero_grad()
         t = odeint(model, torch.tensor([0.0]), torch.tensor([0.0, 1.0]))
         loss = t[1] - t[0]
         loss.backward()
         optimizer.step()
         print (epoch, loss.item())
-        plot(model)
+        plot(model,para)
