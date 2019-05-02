@@ -6,8 +6,8 @@ class Dense(object):
     linear node f(x) = xW + b.
 
     Attributes:
-        parameters (list): variables (input nodes) that directly feed into this node, W and b.
-        parameters_delta (list): gradients for parameters.
+        params (list): variables (input nodes) that directly feed into this node, W and b.
+        params_delta (list): gradients for parameters.
     '''
     def __init__(self, input_shape, output_shape, mean=0, variance=0.01):
         self.params = [mean + variance * np.random.randn(input_shape, output_shape),
@@ -40,7 +40,6 @@ class F(object):
 class Sigmoid(F):
     '''Sigmoid activation function module'''
     def forward(self, x, *args):
-        self.x = x
         self.y = 1.0 / (1.0 + np.exp(-x))
         return self.y
 
@@ -90,4 +89,4 @@ if __name__=='__main__':
 
     from scipy.optimize import check_grad
     x = np.random.randn(n_batch*n_in)
-    check_grad(func, grad, x)
+    print ( check_grad(func, grad, x) ) 
