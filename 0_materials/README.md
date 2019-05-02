@@ -40,7 +40,7 @@ https://www.youtube.com/watch?v=LjWzgTPFu14
 
 https://github.com/rtqichen/torchdiffeq
 
-https://julialang.org/blog/2019/01/fluxdiffeq
+https://news.ycombinator.com/item?id=18676986
 
 ## Deep Learning with PyTorch
 
