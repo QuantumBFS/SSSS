@@ -11,13 +11,14 @@ class Dense(object):
     '''
     def __init__(self, input_shape, output_shape, mean=0, variance=0.01):
         self.params = [mean + variance * np.random.randn(input_shape, output_shape),
-                           mean + variance * np.random.randn(output_shape)]
+                       mean + variance * np.random.randn(output_shape)]
         self.params_delta = [None, None]
 
     def forward(self, x, *args):
         '''function itself.'''
-        self.x = x
-        return np.matmul(x, self.params[0]) + self.params[1]
+        self.x = x # store for backward
+        W, b = self.params
+        return np.dot(x, W) + b 
 
     def backward(self, delta):
         '''
@@ -39,23 +40,27 @@ class F(object):
 
 class Sigmoid(F):
     '''Sigmoid activation function module'''
-    def forward(self, x, *args):
+    def forward(self, x):
         self.y = 1.0 / (1.0 + np.exp(-x))
         return self.y
 
     def backward(self, delta):
         return delta * ((1 - self.y) * self.y)
 
-class Mean(F):
+class MSE(F):
     '''Mean function module'''
-    def forward(self, x, *args):
+    def __init__(self, y):
+        super(MSE, self).__init__()
+        self.y = y
+
+    def forward(self, x):
         self.x = x
-        return x.mean()
+        return ((x-self.y)**2).mean()
 
     def backward(self, delta):
-        return delta * np.ones(self.x.shape) / np.prod(self.x.shape)
+        return delta*2*(self.x-self.y)/np.prod(self.x.shape)
 
-class Net(object):
+class Sequential(object):
     def __init__(self, layers):
         self.layers = layers
 
@@ -65,28 +70,32 @@ class Net(object):
         return x 
 
     def backward(self):
-        y_delta = 1.0
+        delta = 1.0
         for l in self.layers[::-1]:
-            y_delta = l.backward(y_delta)
-        return y_delta
+            delta = l.backward(delta)
+        return delta
 
 if __name__=='__main__':
     np.random.seed(42)
     
-    n_batch = 16
-    n_in = 10
-    n_out = 20
-    net = Net([Dense(n_in, n_out), Sigmoid(), Mean()])
+    n_batch = 32
+    n_in = 1
+    n_hidden = 100
+
+    x = np.random.rand(n_batch, n_in)     
+    y = (x**2).sum(axis=1, keepdims=True) # size = (n_batch, 1)
+
+    model = Sequential([Dense(n_in, n_hidden), Sigmoid(), Dense(n_hidden, 1), MSE(y)])
 
     def func(x):
         x = x.reshape(n_batch, n_in)
-        return net.forward(x)
+        return model.forward(x)
     
     def grad(x):
         x = x.reshape(n_batch, n_in)
-        net.forward(x)
-        return net.backward().reshape(n_batch*n_in)
+        model.forward(x)
+        return model.backward().reshape(n_batch*n_in)
 
     from scipy.optimize import check_grad
     x = np.random.randn(n_batch*n_in)
-    print ( check_grad(func, grad, x) ) 
+    print ('gradient check:',  check_grad(func, grad, x) ) 
