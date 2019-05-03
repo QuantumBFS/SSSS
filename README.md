@@ -15,12 +15,13 @@
 ### Installation
 - [how to install ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
 - [install annaconda](https://www.anaconda.com/distribution/)
-- [install pytorch](https://pytorch.org/)
+- [install PyTorch](https://pytorch.org/)
+- [install Julia](https://julialang.org)
 - [intall Yao.jl](https://github.com/QuantumBFS/Yao.jl#installation)
 
 ### Julia
-- [Julia tutorial & installation guide (Chinese)](https://github.com/Roger-luo/TutorialZH.jl)
-- [一个简单的Julia教程](https://www.bilibili.com/video/av28248187?from=search&seid=5171149583764025744)
+- [Julia语言的中文教程](https://github.com/Roger-luo/TutorialZH.jl)
+- [快速入门 Julia 语言](https://www.bilibili.com/video/av28248187?from=search&seid=5171149583764025744)
 - [Julia入门指引](https://discourse.juliacn.com/t/topic/159)
 
 
