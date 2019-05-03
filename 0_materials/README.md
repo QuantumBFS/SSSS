@@ -8,6 +8,8 @@ https://math.mit.edu/~stevenj/18.336/adjoint.pdf
 
 http://videolectures.net/deeplearning2017_johnson_automatic_differentiation/
 
+https://github.com/mattjj/autodidact
+
 https://people.maths.ox.ac.uk/gilesm/files/NA-08-01.pdf
 
 https://colah.github.io/posts/2015-08-Backprop/
@@ -40,25 +42,10 @@ https://www.youtube.com/watch?v=LjWzgTPFu14
 
 https://github.com/rtqichen/torchdiffeq
 
-https://julialang.org/blog/2019/01/fluxdiffeq
+https://news.ycombinator.com/item?id=18676986
 
 ## Deep Learning with PyTorch
 
 https://fleuret.org/ee559/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
