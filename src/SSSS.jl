@@ -20,6 +20,19 @@ REQUIRE = [
     "IJulia",
     "Revise",
     "Interact",
+    "Plots",
+    "Latexify",
+    "FFTW",
+    PackageSpec(name="Flux", rev="master"),
+    "BitBasis",
+    "KrylovKit",
+    PackageSpec(url="https://github.com/QuantumBFS/QuAlgorithmZoo.jl.git", rev="master"),
+    PackageSpec(name="IRTools", rev="master"),
+    PackageSpec(name="NNlib", rev="master"),
+    PackageSpec(name="Zygote", rev="master"),
+    PackageSpec(name="Yao", rev="master"),
+    PackageSpec(name="YaoBlocks", rev="master"),
+    PackageSpec(name="YaoArrayRegister", rev="master"),
 ]
 
 function __init__()
