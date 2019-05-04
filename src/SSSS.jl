@@ -23,14 +23,16 @@ REQUIRE = [
     "Plots",
     "Latexify",
     "FFTW",
-    "Flux",
+    PackageSpec(name="Flux", rev="master"),
     "BitBasis",
     "KrylovKit",
     PackageSpec(url="https://github.com/QuantumBFS/QuAlgorithmZoo.jl.git", rev="master"),
-    PackageSpec("Zygote", rev="master"),
-    PackageSpec("Yao", rev="master"),
-    PackageSpec("YaoBlocks", rev="master"),
-    PackageSpec("YaoArrayRegister", rev="master"),
+    PackageSpec(name="IRTools", rev="master"),
+    PackageSpec(name="NNlib", rev="master"),
+    PackageSpec(name="Zygote", rev="master"),
+    PackageSpec(name="Yao", rev="master"),
+    PackageSpec(name="YaoBlocks", rev="master"),
+    PackageSpec(name="YaoArrayRegister", rev="master"),
 ]
 
 function __init__()
