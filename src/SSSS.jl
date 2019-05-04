@@ -20,6 +20,17 @@ REQUIRE = [
     "IJulia",
     "Revise",
     "Interact",
+    "Plots",
+    "Latexify",
+    "FFTW",
+    "Flux",
+    "BitBasis",
+    "KrylovKit",
+    "https://github.com/QuantumBFS/QuAlgorithmZoo.jl.git",
+    "Zygote#master",
+    "Yao#master",
+    "YaoBlocks#master",
+    "YaoArrayRegister#master",
 ]
 
 function __init__()

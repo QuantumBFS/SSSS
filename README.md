@@ -44,3 +44,7 @@ julia> using SSSS
 
 julia> notebooks()
 ```
+
+## License
+
+The code is released under MIT License. The rest part is released under [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
