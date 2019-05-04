@@ -26,11 +26,11 @@ REQUIRE = [
     "Flux",
     "BitBasis",
     "KrylovKit",
-    "https://github.com/QuantumBFS/QuAlgorithmZoo.jl.git",
-    "Zygote#master",
-    "Yao#master",
-    "YaoBlocks#master",
-    "YaoArrayRegister#master",
+    PackageSpec(url="https://github.com/QuantumBFS/QuAlgorithmZoo.jl.git", rev="master"),
+    PackageSpec("Zygote", rev="master"),
+    PackageSpec("Yao", rev="master"),
+    PackageSpec("YaoBlocks", rev="master"),
+    PackageSpec("YaoArrayRegister", rev="master"),
 ]
 
 function __init__()
