@@ -92,5 +92,6 @@ if __name__ == '__main__':
         loss = t[1] - t[0]
         loss.backward()
         optimizer.step()
-        print (epoch, loss.item())
+        tbest = (para[3]-para[2])*np.sqrt(para[0]/g)
+        print ("step = %d"%epoch, "time = %.5f"%loss.item(), " (exact = %.5f)"%tbest)
         plot(model,para)
