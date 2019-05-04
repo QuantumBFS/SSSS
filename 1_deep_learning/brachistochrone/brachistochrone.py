@@ -75,6 +75,7 @@ if __name__ == '__main__':
     y1 = 1.0  #fininal y coordinate
 
     para = np.append(solver(v0,g,y1),v0**2/(2*g)) # exact solution as a reference
+    tbest = (para[3]-para[2])*np.sqrt(para[0]/g)
 
     model = Brachistochrone(g, v0, MLP(nh, y1))
     optimizer = optim.Adam(model.parameters(), lr=1E-2)
@@ -92,6 +93,5 @@ if __name__ == '__main__':
         loss = t[1] - t[0]
         loss.backward()
         optimizer.step()
-        tbest = (para[3]-para[2])*np.sqrt(para[0]/g)
         print ("step = %d"%epoch, "time = %.5f"%loss.item(), " (exact = %.5f)"%tbest)
         plot(model,para)
