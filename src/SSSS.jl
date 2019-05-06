@@ -19,7 +19,6 @@ REQUIRE = [
     "PyCall",
     "IJulia",
     "Revise",
-    "Interact",
     "Plots",
     "Latexify",
     "FFTW",
