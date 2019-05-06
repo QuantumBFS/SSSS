@@ -4,6 +4,9 @@
 
 ## Deep Learning and Quantum Programming: A Spring School
 
+## Challenge
+
+[Song-Shan-Hu Sping School Coding Challenge](Challenge.md)
 
 ## Preparation
 
