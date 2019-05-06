@@ -1,6 +1,6 @@
 # Song-Shan-Hu Sping School Coding Challenge
 
-<img align="middle"  src="c60.jpg" width=400/>
+<img align="middle"  src="_assets/c60.jpg" width=400/>
 
 ## 赛题
 在如图所示的Buckyball结构中，在每一个顶点上有一个 <img src="http://latex.codecogs.com/svg.latex?\sigma_i=\pm 1"></img> 的伊辛自旋。近邻的自旋之间有单位强度的反铁磁耦合。
