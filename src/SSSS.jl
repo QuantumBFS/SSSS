@@ -14,35 +14,34 @@ function notebooks()
     return IJulia.notebook(dir=joinpath(@__DIR__, ".."))
 end
 
-REQUIRE = [
-    "GR",
-    "PyCall",
-    "IJulia",
-    "Revise",
-    "Interact",
-    "Plots",
-    "Latexify",
-    "FFTW",
-    PackageSpec(name="Flux", rev="master"),
-    "BitBasis",
-    "KrylovKit",
-    PackageSpec(url="https://github.com/QuantumBFS/QuAlgorithmZoo.jl.git", rev="master"),
-    PackageSpec(name="IRTools", rev="master"),
-    PackageSpec(name="NNlib", rev="master"),
-    PackageSpec(name="Zygote", rev="master"),
-    PackageSpec(name="Yao", rev="master"),
-    PackageSpec(name="YaoBlocks", rev="master"),
-    PackageSpec(name="YaoArrayRegister", rev="master"),
-]
+# REQUIRE = [
+#     "GR",
+#     "PyCall",
+#     "IJulia",
+#     "Revise",
+#     "Plots",
+#     "Latexify",
+#     "FFTW",
+#     PackageSpec(name="Flux", rev="master"),
+#     "BitBasis",
+#     "KrylovKit",
+#     PackageSpec(url="https://github.com/QuantumBFS/QuAlgorithmZoo.jl.git", rev="master"),
+#     PackageSpec(name="IRTools", rev="master"),
+#     PackageSpec(name="NNlib", rev="master"),
+#     PackageSpec(name="Zygote", rev="master"),
+#     PackageSpec(name="Yao", rev="master"),
+#     PackageSpec(name="YaoBlocks", rev="master"),
+#     PackageSpec(name="YaoArrayRegister", rev="master"),
+# ]
 
-function __init__()
-    for each in REQUIRE
-        if each in keys(Pkg.installed())
-            continue
-        else
-            Pkg.add(each)
-        end
-    end
-end
+# function __init__()
+#     for each in REQUIRE
+#         if each in keys(Pkg.installed())
+#             continue
+#         else
+#             Pkg.add(each)
+#         end
+#     end
+# end
 
 end # module
