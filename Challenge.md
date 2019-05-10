@@ -23,13 +23,11 @@
 ## 比赛流程
 
 - 在GitHub上建立私有代码库，添加用户`quantumbfs0` 作为合作者 (Settings/Collaborators)。
-
 - 开发求解程序 :soccer:。
-
 - 代码库中除了包含求解程序之外，在文件`ans1.txt`和`ans2.txt`中以文本格式分别存储两问的答案。
-
 - 周三下午是自由编程时间，授课教师在会场为大家解决技术问题。
-
 - 5月10日0时以后公开代码库供评审和学习。
-
 - 优胜队、或多个取得正确结果的赛队参加周五上午的答辩，分享求解思路和程序实现。
+
+##[Submissions](https://github.com/quantumbfs0?tab=stars)
+
