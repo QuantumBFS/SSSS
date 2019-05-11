@@ -29,5 +29,5 @@
 - 5月10日0时以后公开代码库供评审和学习。
 - 优胜队、或多个取得正确结果的赛队参加周五上午的答辩，分享求解思路和程序实现。
 
-##[Submissions](https://github.com/quantumbfs0?tab=stars)
+## [Submissions](https://github.com/quantumbfs0?tab=stars)
 
