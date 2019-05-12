@@ -1,9 +1,33 @@
-<p align="center">
-<img align="middle" src="_assets/SongShanHu2019.jpeg" width="500" alt="poster"/>
-</p>
+# Deep Learning and Quantum Programming: A Spring School
 
-## Deep Learning and Quantum Programming: A Spring School
+Song Shan lake Spring School, with lectures, code challenge and happy fatty night.
 
+Dong Guan, Guang Zhou, China, from 5th May to 10th May, 2019.
+
+## Table of Contents
+1. Deep Learning
+    * [`lecture_notes.pdf`](https://github.com/QuantumBFS/SSSS/blob/master/1_deep_learning/lecture_notes.pdf) and [`slides/`](https://github.com/QuantumBFS/SSSS/tree/master/1_deep_learning/slides)
+    * Demo codes
+        * Poor man's computation graph: [`computation_graph.py`](https://github.com/QuantumBFS/SSSS/blob/master/1_deep_learning/computation_graph.py)
+        * Variational free energy with flow model: [`realnvp/`](https://github.com/QuantumBFS/SSSS/tree/master/1_deep_learning/realnvp)
+        * Hamiltonian inverse design with reverse mode AD: [`schrodinger.py`](https://github.com/QuantumBFS/SSSS/blob/master/1_deep_learning/schrodinger.py)
+        * Solving the fastest descent problem with NeuralODE [`brachistochrone/`](https://github.com/QuantumBFS/SSSS/tree/master/1_deep_learning/brachistochrone)
+2. Tensor Networks
+3. Julia language
+4. Variational Quantum Computing
+    * Lecture Note: `quantum_lecture_note.pdf`
+    * Slides: [google slides](https://docs.google.com/presentation/d/1jUTpa8pB3jEOWDW1U0rDTDQ-kpri8j8S4y77GQCo3iM/edit?usp=sharing)
+    * Notebooks
+        * The solution to the graph embeding problem: `graph_embeding.ipynb`
+        * Quantum circuit computing with Yao.jl: `QC-with-Yao.ipynb`
+        * Landscape of a quantum circuit: `variational_quantum_circuit.ipynb`
+        * Variational quantum eigensolver: `variational_quantum_circuit.ipynb`
+        * Matrix Product state inspired variational quantum eigensolver `VQE_action.ipynb`
+        * Quantum circuit born machine: `qcbm_gaussian.ipynb`
+        * Gradient vanishing problem: `variational_quantum_circuit.ipynb` and `VQE_action.ipynb`
+        * Mapping a quantum circuit to tensor networks: `qc_tensor_mapping.ipynb`
+
+ 
 ## Challenge
 
 [Song-Shan-Hu Sping School Coding Challenge](Challenge.md)
