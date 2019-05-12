@@ -2,7 +2,7 @@
 
 Song Shan lake Spring School, with lectures, code challenge and happy fatty night.
 
-Dong Guan, Guang Zhou, China, from 5th May to 10th May, 2019.
+Song Shan Lake, Dong Guan, China, from 5th May to 10th May, 2019.
 
 ## Table of Contents
 1. Deep Learning
