@@ -2,19 +2,27 @@
 
 ## Automatic Differentiation
 
-https://arxiv.org/abs/1502.05767
+### Theory
+
+https://timvieira.github.io/blog/post/2017/08/18/backprop-is-not-just-the-chain-rule/
+
+https://people.maths.ox.ac.uk/gilesm/files/NA-08-01.pdf
 
 https://math.mit.edu/~stevenj/18.336/adjoint.pdf
+
+https://colah.github.io/posts/2015-08-Backprop/
+
+http://www.cs.cornell.edu/courses/cs5740/2017sp/lectures/04-nn-compgraph.pdf
+
+### Implementation
 
 http://videolectures.net/deeplearning2017_johnson_automatic_differentiation/
 
 https://github.com/mattjj/autodidact
 
-https://people.maths.ox.ac.uk/gilesm/files/NA-08-01.pdf
+### Applications 
 
-https://colah.github.io/posts/2015-08-Backprop/
-
-http://www.cs.cornell.edu/courses/cs5740/2017sp/lectures/04-nn-compgraph.pdf
+https://arxiv.org/abs/1502.05767
 
 ## Generative Models
 
