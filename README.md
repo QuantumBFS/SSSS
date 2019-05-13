@@ -13,6 +13,10 @@ Song Shan Lake, Dong Guan, China, from 5th May to 10th May, 2019.
         * Hamiltonian inverse design with reverse mode AD: [`schrodinger.py`](https://github.com/QuantumBFS/SSSS/blob/master/1_deep_learning/schrodinger.py)
         * Solving the fastest descent problem with NeuralODE [`brachistochrone/`](https://github.com/QuantumBFS/SSSS/tree/master/1_deep_learning/brachistochrone)
 2. Tensor Networks
+   * [`Slides on tensor networks`](https://github.com/QuantumBFS/SSSS/blob/master/2_tensor_network/Tutorial_tensor_network.pdf)
+   * [`Slides on contraction methods for infinite tensor networks`](https://github.com/QuantumBFS/SSSS/blob/master/2_tensor_network/tensor_contraction_methods.pdf)
+   * [`Tutorial and demo codes on computing $2$-D Ising model partition function using tensor networks`](https://github.com/QuantumBFS/SSSS/blob/master/2_tensor_network/tensor_contraction_simple.ipynb)
+   * [`Tutorial and demo codes on the MPS Born machine`](https://github.com/QuantumBFS/SSSS/blob/master/2_tensor_network/mps_tutorial.ipynb)
 3. Julia language
 4. Variational Quantum Computing
     * Lecture Note: [quantum_lecture_note.pdf](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/quantum_lecture_note.pdf)
