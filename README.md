@@ -18,6 +18,7 @@ Song Shan Lake, Dong Guan, China, from 5th May to 10th May, 2019.
    * [`Tutorial and demo codes on computing $2$-D Ising model partition function using tensor networks`](https://github.com/QuantumBFS/SSSS/blob/master/2_tensor_network/tensor_contraction_simple.ipynb)
    * [`Tutorial and demo codes on the MPS Born machine`](https://github.com/QuantumBFS/SSSS/blob/master/2_tensor_network/mps_tutorial.ipynb)
 3. Julia language
+    * [`julia-hands-on.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/3_julia/julia-hands-on.ipynb)
 4. Variational Quantum Computing
     * Lecture Note: [`quantum_lecture_note.pdf`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/quantum_lecture_note.pdf)
     * Slides: [`google slides`](https://docs.google.com/presentation/d/1jUTpa8pB3jEOWDW1U0rDTDQ-kpri8j8S4y77GQCo3iM/edit?usp=sharing)
