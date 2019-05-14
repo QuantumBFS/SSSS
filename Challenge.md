@@ -7,7 +7,7 @@
 
 1. 求<img src="http://latex.codecogs.com/svg.latex?\ln(Z)/N"></img>，其中 <img src="http://latex.codecogs.com/svg.latex?N"></img> 是顶点数，而 
 
-<img align="middle" src="http://latex.codecogs.com/png.latex?Z = \sum_{\{\sigma_i\}} \exp\left(-\sum_{\langle i,j \rangle} \sigma_i \sigma_j\right)"></img>
+<img align="middle" src="http://latex.codecogs.com/svg.latex?Z = \sum_{\{\sigma_i\}} \exp\left(-\sum_{\langle i,j \rangle} \sigma_i \sigma_j\right)"></img>
 
 2. 求基态简并度。 
 
