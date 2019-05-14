@@ -1,8 +1,8 @@
 # Deep Learning and Quantum Programming: A Spring School
 
-Song Shan lake Spring School, with lectures, code challenge and happy fatty night.
+Song Shan Lake Spring School, features lectures, code challenge, install party and happy fatty night.
 
-Song Shan Lake, Dong Guan, China, from 5th May to 10th May, 2019.
+*South Bay Interdisciplinary Science Center, Songshan Lake Materials Laboratory, Dongguan, China,  5th-10th May, 2019*
 
 ## Table of Contents
 1. Deep Learning
@@ -28,7 +28,7 @@ Song Shan Lake, Dong Guan, China, from 5th May to 10th May, 2019.
         * Landscape of a quantum circuit: [`variational_quantum_circuit.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/variational_quantum_circuit.ipynb)
         * Variational quantum eigensolver: [`variational_quantum_circuit.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/variational_quantum_circuit.ipynb)
         * Matrix Product state inspired variational quantum eigensolver [`VQE_action.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/VQE_action.ipynb)
-        * Quantum circuit born machine: [qcbm_gaussian.ipynb](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/qcbm_gaussian.ipynb)
+        * Quantum circuit born machine: [`qcbm_gaussian.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/qcbm_gaussian.ipynb)
         * Gradient vanishing problem: [`variational_quantum_circuit.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/variational_quantum_circuit.ipynb) and [`VQE_action.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/VQE_action.ipynb)
         * Mapping a quantum circuit to tensor networks: [`qc_tensor_mapping.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/qc_tensor_mapping.ipynb)
 
