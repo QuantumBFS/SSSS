@@ -9,6 +9,19 @@
 
 <img align="middle" src="http://latex.codecogs.com/svg.latex?Z = \sum_{\{\sigma_i\}} \exp\left(-\sum_{\langle i,j \rangle} \sigma_i \sigma_j\right)"></img>
 
+
+#### A translation
+In the Buckyball structure in the figure, we attach an ising spin <img src="http://latex.codecogs.com/svg.latex?\sigma_i=\pm 1"></img> on each vertex.
+Neighboring spins are correlated by an anti-ferromagnetic coupling of unit strength.
+
+1. Get <img src="http://latex.codecogs.com/svg.latex?\ln(Z)/N"></img>, where <img src="http://latex.codecogs.com/svg.latex?N"></img> is the number of vertices, and
+
+<img align="middle" src="http://latex.codecogs.com/svg.latex?Z = \sum_{\{\sigma_i\}} \exp\left(-\sum_{\langle i,j \rangle} \sigma_i \sigma_j\right)"></img>
+
+2. Count the ground state degeneracy.
+
+## [Submissions](https://github.com/quantumbfs0?tab=stars)
+
 2. 求基态简并度。 
 
 ## 比赛规则
