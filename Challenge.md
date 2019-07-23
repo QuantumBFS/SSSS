@@ -13,8 +13,7 @@
 
 -----------------------------------------
 
-*translation*: In the Buckyball structure as shown in the figure, we attach an ising spin <img src="http://latex.codecogs.com/svg.latex?\sigma_i=\pm 1"></img> on each vertex.
-Two neighboring spins are correlated by an anti-ferromagnetic coupling of unit strength.
+*translation*: In the Buckyball structure as shown in the figure, we attach an ising spin <img src="http://latex.codecogs.com/svg.latex?\sigma_i=\pm 1"></img> on each vertex. The neighboring spins interact with an anti-ferromagnetic coupling of unit strength.
 
 1. Get <img src="http://latex.codecogs.com/svg.latex?\ln(Z)/N"></img>, where <img src="http://latex.codecogs.com/svg.latex?N"></img> is the number of vertices, and
 
