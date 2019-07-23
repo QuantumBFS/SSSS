@@ -11,6 +11,16 @@
 
 2. 求基态简并度。 
 
+-----------------------------------------
+
+*translation*: In the Buckyball structure as shown in the figure, we attach an ising spin <img src="http://latex.codecogs.com/svg.latex?\sigma_i=\pm 1"></img> on each vertex. The neighboring spins interact with an anti-ferromagnetic coupling of unit strength.
+
+1. Get <img src="http://latex.codecogs.com/svg.latex?\ln(Z)/N"></img>, where <img src="http://latex.codecogs.com/svg.latex?N"></img> is the number of vertices, and
+
+<img align="middle" src="http://latex.codecogs.com/svg.latex?Z = \sum_{\{\sigma_i\}} \exp\left(-\sum_{\langle i,j \rangle} \sigma_i \sigma_j\right)"></img>
+
+2. Count the ground state degeneracy.
+
 ## 比赛规则
 - 个人或组队参加皆可。组队参加时，奖品分配由内部协商决定。 
 - 比赛截止时间北京时间5月10日0时。以此时刻之前commit到GiHub的求解程序和结果为评判标准。
