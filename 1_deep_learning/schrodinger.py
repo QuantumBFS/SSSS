@@ -19,7 +19,7 @@ class Schrodinger1D(nn.Module):
         H = torch.diag(self.potential) + self.K
         _, psi = torch.symeig(H, eigenvectors=True) 
 
-        return psi[:, 0]
+        return psi[:, 0] # 0 for ground state
 
     def forward(self, target):
         psi = self._solve()
@@ -51,7 +51,7 @@ if __name__=='__main__':
     target = torch.from_numpy(target)
 
     model = Schrodinger1D(xmesh)
-    optimizer = torch.optim.LBFGS(model.parameters(), max_iter=10)
+    optimizer = torch.optim.LBFGS(model.parameters(), max_iter=10, tolerance_change = 1E-7, tolerance_grad=1E-7, line_search_fn='strong_wolfe')
 
     def closure():
         optimizer.zero_grad()
