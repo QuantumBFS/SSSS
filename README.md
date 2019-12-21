@@ -19,12 +19,12 @@ Song Shan Lake Spring School, features lectures, code challenge, install party a
    * [`Tutorial and demo codes on the MPS Born machine`](https://github.com/QuantumBFS/SSSS/blob/master/2_tensor_network/mps_tutorial.ipynb)
 3. Julia language
     * [`julia-hands-on.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/3_julia/julia-hands-on.ipynb)
-4. Variational Quantum Computing
+4. Quantum Computing with Yao.jl
     * Lecture Note: [`quantum_lecture_note.pdf`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/quantum_lecture_note.pdf)
     * Slides: [`google slides`](https://docs.google.com/presentation/d/1jUTpa8pB3jEOWDW1U0rDTDQ-kpri8j8S4y77GQCo3iM/edit?usp=sharing)
     * Notebooks
         * The solution to the graph embeding problem: [`graph_embeding.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/graph_embeding.ipynb)
-        * Quantum circuit computing with Yao.jl: [`QC-with-Yao.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/QC-with-Yao.ipynb)
+        * Quantum circuit computing with Yao.jl: [`QC-with-Yao.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/QC-with-Yao.ipynb), [Yao-talk](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/yao-talk-2019.pdf)
         * Landscape of a quantum circuit: [`variational_quantum_circuit.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/variational_quantum_circuit.ipynb)
         * Variational quantum eigensolver: [`variational_quantum_circuit.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/variational_quantum_circuit.ipynb)
         * Matrix Product state inspired variational quantum eigensolver [`VQE_action.ipynb`](https://github.com/QuantumBFS/SSSS/blob/master/4_quantum/VQE_action.ipynb)

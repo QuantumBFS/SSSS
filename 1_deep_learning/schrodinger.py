@@ -1,3 +1,7 @@
+'''
+idea taken from https://math.mit.edu/~stevenj/18.336/adjoint.pdf
+'''
+
 import torch
 import torch.nn as nn
 
