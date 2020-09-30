@@ -2,7 +2,9 @@
 idea taken from https://math.mit.edu/~stevenj/18.336/adjoint.pdf
 '''
 
+import numpy as np 
 import torch
+torch.set_default_dtype(torch.float64)
 import torch.nn as nn
 
 class Schrodinger1D(nn.Module):
@@ -27,39 +29,34 @@ class Schrodinger1D(nn.Module):
 
     def forward(self, target):
         psi = self._solve()
-        return (psi*target).abs().sum()
+        return (psi**2 - target).abs().sum()
 
     def plot(self, target):
-
         psi = self._solve()
 
         plt.cla()
         plt.plot(self.xmesh.numpy(), target.numpy(), label='target')
-        plt.plot(self.xmesh.numpy(), np.abs(psi.detach().numpy()), label='current')
+        plt.plot(self.xmesh.numpy(), psi.square().detach().numpy(), label='current')
         plt.plot(self.xmesh.numpy(), self.potential.detach().numpy()/10000, label='V/10000')
         plt.legend()
         plt.draw()
 
 if __name__=='__main__':
-    import numpy as np    
-    #prepare mesh and target
-    xmin = -1; xmax = 1; Nmesh = 300
-    xmesh = np.linspace(xmin, xmax, Nmesh)
+    #prepare mesh and target density
+    xmin = -1; xmax = 1; Nmesh = 500
+    xmesh = torch.linspace(xmin, xmax, Nmesh)
     
-    target = np.zeros(Nmesh)
-    idx = np.where(np.abs(xmesh)<0.5)
-    target[idx] = 1.-np.abs(xmesh[idx])
-    target = target/np.linalg.norm(target)
+    target = torch.zeros(Nmesh)
+    idx = torch.where(torch.abs(xmesh)<0.5)
+    target[idx] = 1.-torch.abs(xmesh[idx])
+    target = (target/torch.norm(target))**2
     
-    xmesh = torch.from_numpy(xmesh) 
-    target = torch.from_numpy(target)
-
     model = Schrodinger1D(xmesh)
     optimizer = torch.optim.LBFGS(model.parameters(), max_iter=10, tolerance_change = 1E-7, tolerance_grad=1E-7, line_search_fn='strong_wolfe')
 
     def closure():
         optimizer.zero_grad()
-        loss = 1.-model(target) # infidelity
+        loss = model(target) # density difference 
         loss.backward()
         return loss 
 
