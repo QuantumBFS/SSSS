@@ -1,5 +1,7 @@
 # Deep Learning and Quantum Programming: A Spring School
 
+![Agent maintained](https://img.shields.io/badge/maintenance-agent%20maintained-blue)
+
 Song Shan Lake Spring School, features lectures, code challenge, install party and happy fatty night.
 
 *South Bay Interdisciplinary Science Center, Songshan Lake Materials Laboratory, Dongguan, China,  5th-10th May, 2019*
