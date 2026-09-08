@@ -23,7 +23,7 @@ class Schrodinger1D(nn.Module):
     def _solve(self):
 
         H = torch.diag(self.potential) + self.K
-        _, psi = torch.symeig(H, eigenvectors=True) 
+        _, psi = torch.linalg.eigh(H)
 
         return psi[:, 0] # 0 for ground state
 
